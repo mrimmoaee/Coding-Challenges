@@ -10,4 +10,3 @@ class Solution(object):
             if sum == target:
                 return [i,j]
         
-print(Solution.twoSum(nums, target))
