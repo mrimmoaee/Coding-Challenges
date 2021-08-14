@@ -38,4 +38,7 @@ Classes is a blueprint for the structure of methods and attributes. Individual o
 from this blueprint. Classes include fields for attributes and methods(function) for behaviours.
 In this example, Human is the class which include name and gender as a attribute while updateAttendance() and bloodGroup() are method.
 
-![Classes](./Images/Classes.png)
+<!-- ![Classes](./Images/Classes.png) -->
+<br>
+<p align="center">
+<img  width="400" height="400" src="./Images/Classes.png"></p>
