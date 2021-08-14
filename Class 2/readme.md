@@ -30,4 +30,6 @@ OOP is the newer approach then Procedural programming. Example of procedural pro
 
 ## Building blocks of OOP
 
+![image info](./Images/structure.png)
+
 - ### Classes
