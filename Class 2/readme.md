@@ -42,3 +42,11 @@ In this example, Human is the class which include name and gender as a attribute
 <br>
 <p align="center">
 <img  width="400" height="400" src="./Images/Classes.png"></p>
+
+## References
+
+<https://www.educative.io/blog/object-oriented-programming>
+
+<https://www.educative.io/blog/how-to-use-oop-in-python>
+
+<https://www.programiz.com/python-programming/object-oriented-programming>
