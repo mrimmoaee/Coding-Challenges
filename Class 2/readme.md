@@ -12,3 +12,22 @@ classes and objects. Generally, it is used to design a software program into sim
 3. Allows for class-specific behavior through polymorphism
 4. Easier to debug, classes often contain all applicable information to them
 5. Secure, protects information through encapsulation
+
+## Which two programming paradigms are the most popular ones ?
+
+OOP is the newer approach then Procedural programming. Example of procedural programming language is C, Pascal and Cobol.
+
+| Procedural Oriented Programming                       | Object Oriented Programming                            |
+| ----------------------------------------------------- | ------------------------------------------------------ |
+| Program is divided into small parts called functions. | Program is divided into small parts called objects.    |
+| It follows Top Down Approach                          | It follows Bottom Up Approach                          |
+| Do not have any Access Specifier                      | Private, Public and Protected are the Access Specifier |
+| It's not easy to add new data and function            | It's easy to add new data and function                 |
+| Less secure because there is no way to hide data      | More secure because there is way to hide data          |
+| Overloading is not allow                              | Overloading is allow                                   |
+| Function is more important than data                  | Data is more important than function                   |
+| It is based on unreal world                           | It is based on real world                              |
+
+## Building blocks of OOP
+
+- ### Classes
