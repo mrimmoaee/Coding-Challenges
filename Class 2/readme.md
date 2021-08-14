@@ -33,3 +33,9 @@ OOP is the newer approach then Procedural programming. Example of procedural pro
 ![image info](./Images/structure.png)
 
 - ### Classes
+
+Classes is a blueprint for the structure of methods and attributes. Individual objects are created
+from this blueprint. Classes include fields for attributes and methods(function) for behaviours.
+In this example, Human is the class which include name and gender as a attribute while updateAttendance() and bloodGroup() are method.
+
+![Classes](./Images/Classes.png)
