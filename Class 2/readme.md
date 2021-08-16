@@ -41,7 +41,7 @@ In this example, Human is the class which include name and gender as a attribute
 <!-- ![Classes](./Images/Classes.png) -->
 <br>
 <p align="center">
-<img  width="400" height="400" src="./Images/Classes.png"></p>
+<img  width="400" height="500" src="./Images/Classes.png"></p>
 
 ## References
 
