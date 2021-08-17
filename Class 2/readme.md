@@ -40,8 +40,83 @@ In this example, Human is the class which include name and gender as a attribute
 
 <!-- ![Classes](./Images/Classes.png) -->
 <br>
+<!-- <p align="center">
+<img  width="400" height="500" src="./Images/Classes.png"></p> -->
+
+```
+class Human {
+  constructor(name, gender, startYear, endYear) {
+    this.name = name;
+    this.gender = gender;
+    this.startYear = startYear;
+    this.endYear = endYear;
+  }
+
+  //Declare private variables
+  _attendance = 0;
+
+  getRemainingCourseYear() {
+    //Getter
+    return this.calcYear();
+  }
+
+  calcYear() {
+    //calculate remaining year using start and end year
+    return this.endYear - this.startYear;
+  }
+
+  bloodGroup() {
+    return console.log("A+");
+  }
+
+  updateAttendance() {
+    //add a day to the human's attendance
+    this._attendance++;
+  }
+}
+```
+
+- ### Objects
+
+Object are created from the instances of classes with a specific data. A number of object is created from a single class. Objects contains state and behaviours. State is actually a data, below in the code snippet names, gender and all other information where data can be stored about human where as behaviours are methods/functions which object can undertake.
+
+```
+const Henna = new Human("Henna", "Female", "2016", "2019");
+
+const Julie = new Human("Julie", "Female", "2019", "2022");
+```
+
+- ### Attributes
+  Attributes is a place where data is stored when an object is instantiated from the class template.
+  Attributes is always defined inside class template.
+
+```
+ constructor(name, gender, startYear, endYear) {
+    this.name = name;
+    this.gender = gender;
+    this.startYear = startYear;
+    this.endYear = endYear;
+  }
+```
+
+- ### Methods
+  Methods represent the behaviour of an object. Methods usually uses to perform action, return information about object as well as update object's information. In the code below, updateAttendance() and calYear() is the example of method.
+
+```
+ bloodGroup() {
+    return console.log("A+");
+  }
+
+  updateAttendance() {
+    //add a day to the human's attendance
+    this._attendance++;
+  }
+```
+
+## Four Pillars of OOP
+
 <p align="center">
-<img  width="400" height="500" src="./Images/Classes.png"></p>
+<img  width="400" height="300" src="./Images/images.png"></p>
 
 ## References
 
