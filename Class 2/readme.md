@@ -118,6 +118,66 @@ const Julie = new Human("Julie", "Female", "2019", "2022");
 <p align="center">
 <img  width="400" height="300" src="./Images/images.png"></p>
 
+## Inheritance
+
+Inheritance allows a new classes to access all the properties and behaviours from other classes. Classes which share the properties and behaviour is called parent, base or super class where as the child classes called derived or extended class.
+
+In the following code snippet, child class olympianStudent inherits the method bloodGroup() from the parent class Human, and the child class adds an additional method, award().
+
+```
+class Human {
+  constructor(name, gender, startYear, endYear) {
+    this.name = name;
+    this.gender = gender;
+    this.startYear = startYear;
+    this.endYear = endYear;
+  }
+
+  //Declare private variables
+  _attendance = 0;
+
+  getRemainingCourseYear() {
+    //Getter
+    return this.calcYear();
+  }
+
+  calcYear() {
+    //calculate remaining year using start and end year
+    return this.endYear - this.startYear;
+  }
+
+  bloodGroup() {
+    return console.log("A+");
+  }
+
+  updateAttendance() {
+    //add a day to the human's attendance
+    this._attendance++;
+  }
+}
+
+//Child class olympianStudent, inherits from parent Human
+class olympianStudent extends Human {
+    constructor(name, gender, startYear, endYear) {
+        super(name);
+        super(gender);
+        super(startYear);
+        super(endYear);
+    }
+
+    award() {
+        //additional method for olympianStudent child class
+        return console.log("Gold medal")
+    }
+}
+
+//instantiate a new olympianStudent object
+const Shila = new olympianStudent("Fluffy", "Female", 01/02/2021, 01/08/2021);
+
+Shila.award();
+
+```
+
 ## References
 
 <https://www.educative.io/blog/object-oriented-programming>
