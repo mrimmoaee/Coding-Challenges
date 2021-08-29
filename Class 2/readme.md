@@ -90,7 +90,7 @@ const Julie = new Human("Julie", "Female", "2019", "2022");
   Attributes is a place where data is stored when an object is instantiated from the class template.
   Attributes is always defined inside class template.
 
-```
+```javascript
  constructor(name, gender, startYear, endYear) {
     this.name = name;
     this.gender = gender;
@@ -267,12 +267,16 @@ var student = (function () {
 })();
 
 alert(student.getFullName()); // Jason Shapiro
-person.setFullName("Jim White");
+student.setFullName("Jim White");
 alert(student.getFullName()); // Jim White
-person.setFullName(42); // Invalid Name; the name is not changed.
-person.fullName = 42; // Doesn't affect the private fullName variable.
+student.setFullName(42); // Invalid Name; the name is not changed.
+student.fullName = 42; // Doesn't affect the private fullName variable.
 alert(student.getFullName()); // Jim White is printed again.
 ```
+
+## Abstraction
+
+## Polymorphism
 
 ## References
 
