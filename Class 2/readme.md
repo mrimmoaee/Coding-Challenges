@@ -43,7 +43,7 @@ In this example, Human is the class which include name and gender as a attribute
 <!-- <p align="center">
 <img  width="400" height="500" src="./Images/Classes.png"></p> -->
 
-```
+```javascript
 class Human {
   constructor(name, gender, startYear, endYear) {
     this.name = name;
@@ -80,7 +80,7 @@ class Human {
 
 Object are created from the instances of classes with a specific data. A number of object is created from a single class. Objects contains state and behaviours. State is actually a data, below in the code snippet names, gender and all other information where data can be stored about human where as behaviours are methods/functions which object can undertake.
 
-```
+```javascript
 const Henna = new Human("Henna", "Female", "2016", "2019");
 
 const Julie = new Human("Julie", "Female", "2019", "2022");
@@ -102,7 +102,7 @@ const Julie = new Human("Julie", "Female", "2019", "2022");
 - ### Methods
   Methods represent the behaviour of an object. Methods usually uses to perform action, return information about object as well as update object's information. In the code below, updateAttendance() and calYear() is the example of method.
 
-```
+```javascript
  bloodGroup() {
     return console.log("A+");
   }
@@ -115,16 +115,19 @@ const Julie = new Human("Julie", "Female", "2019", "2022");
 
 ## Four Pillars of OOP
 
+<br>
 <p align="center">
 <img  width="400" height="300" src="./Images/images.png"></p>
 
+<br>
+
 ## Inheritance
 
-Inheritance allows a new classes to access all the properties and behaviours from other classes. Classes which share the properties and behaviour is called parent, base or super class where as the child classes called derived or extended class.
+Inheritance allows a new classes to access all the properties and behaviours from other classes. Classes which share the properties and behaviour is called parent, base or super class where as the child classes called derived or extended class. Inheritance is uses to eliminate redundant code.
 
 In the following code snippet, child class olympianStudent inherits the method bloodGroup() from the parent class Human, and the child class adds an additional method, award().
 
-```
+```javascript
 class Human {
   constructor(name, gender, startYear, endYear) {
     this.name = name;
@@ -158,24 +161,117 @@ class Human {
 
 //Child class olympianStudent, inherits from parent Human
 class olympianStudent extends Human {
-    constructor(name, gender, startYear, endYear) {
-        super(name);
-        super(gender);
-        super(startYear);
-        super(endYear);
-    }
+  constructor(name, gender, startYear, endYear) {
+    super(name);
+    super(gender);
+    super(startYear);
+    super(endYear);
+  }
 
-    award() {
-        //additional method for olympianStudent child class
-        return console.log("Gold medal")
-    }
+  award() {
+    //additional method for olympianStudent child class
+    return console.log("Gold medal");
+  }
 }
 
 //instantiate a new olympianStudent object
-const Shila = new olympianStudent("Fluffy", "Female", 01/02/2021, 01/08/2021);
+const Shila = new olympianStudent(
+  "Fluffy",
+  "Female",
+  01 / 02 / 2021,
+  01 / 08 / 2021
+);
 
 Shila.award();
+```
 
+## Encapsulation
+
+Encapsulation is the idea that the data of an object should not be accessed directly. Instead
+of using a proper way to call a method.
+
+- ### Problem
+
+```javascript
+var student = {
+  fullName: "JOHN",
+};
+
+alert(student.fullName); // JOHN
+student.fullName = "Jimmy";
+alert(student.fullName); // Jimmy
+```
+
+In this code, user can easily change the fullname without any hesitation but if someone misuse
+this and input a numerical value instead of string.
+
+```javascript
+student.fullName = 20;
+alert(student.fullName); // 20
+```
+
+- ### Continue with the problem 1 by providing data validation
+
+```javascript
+var student = {
+  fullName: "Jason Shapiro",
+  setFullName: function (newValue) {
+    var reg = new RegExp(/\d+/);
+    if (reg.test(newValue)) {
+      alert("Invalid Name");
+    } else {
+      this.fullName = newValue;
+    }
+  },
+  getFullName: function () {
+    return this.fullName;
+  },
+};
+
+alert(student.getFullName()); // Jason Shapiro
+student.setFullName("Jim White");
+alert(student.getFullName()); // Jim White
+student.setFullName(42); // Invalid Name
+alert(student.getFullName()); // Jim White
+```
+
+Now data validation is working but if someone directly access student.fullname
+
+```javascript
+student.fullName = 42; // No validation is executed; the name is changed and...
+alert(student.getFullName()); // ...42 is printed.
+```
+
+So to make fullname private and give access to all the variable which is inside the function
+getFullName() and setFullName() can be done using closures. A closure gives access to an outer function’s scope from an inner function.
+
+- ### Solution
+
+```javascript
+var student = (function () {
+  var fullName = "Jason Shapiro";
+  var reg = new RegExp(/\d+/);
+
+  return {
+    setFullName: function (newValue) {
+      if (reg.test(newValue)) {
+        alert("Invalid Name");
+      } else {
+        fullName = newValue;
+      }
+    },
+    getFullName: function () {
+      return fullName;
+    },
+  }; // end of the return
+})();
+
+alert(student.getFullName()); // Jason Shapiro
+person.setFullName("Jim White");
+alert(student.getFullName()); // Jim White
+person.setFullName(42); // Invalid Name; the name is not changed.
+person.fullName = 42; // Doesn't affect the private fullName variable.
+alert(student.getFullName()); // Jim White is printed again.
 ```
 
 ## References
@@ -185,3 +281,5 @@ Shila.award();
 <https://www.educative.io/blog/how-to-use-oop-in-python>
 
 <https://www.programiz.com/python-programming/object-oriented-programming>
+
+<https://www.intertech.com/encapsulation-in-javascript/>

@@ -31,4 +31,5 @@ class Human {
 
 const Henna = new Human("Henna", "Female", "2016", "2019");
 
-console.log(Henna);
+// console.log(Henna);
+console.log(Human("GUN", "Female", "2016", "2019"));
